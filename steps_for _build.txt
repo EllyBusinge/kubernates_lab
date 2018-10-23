@@ -48,7 +48,7 @@ vim agent-bond-opts
  
  mysql
  
-docker run -d --name mysql_database -e MYSQL_USER=sivareddy -e MYSQL_PASSWORD=hemaLATHA@9490 -e MYSQL_DATABASE=guestbook -p 3306:3306 docker.io/openshift/mysql-56-centos7
+docker run -d --name mysql_database -e MYSQL_USER=sivareddy -e MYSQL_PASSWORD=sivareddy -e MYSQL_DATABASE=guestbook -p 3306:3306 docker.io/openshift/mysql-56-centos7
 
  
  
@@ -62,3 +62,14 @@ docker run -d --name mysql_database -e MYSQL_USER=sivareddy -e MYSQL_PASSWORD=he
  
  
   docker run --name=microservices-helloworld-vertx -p 8080:8080 -d microservices-helloworld-vertx:1.1
+
+
+
+http://192.168.56.102:8080/api/messages
+
+
+http://192.168.56.101:8080/
+
+
+
+http://192.168.56.100:8080/api/hello/sivareddy
