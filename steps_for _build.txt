@@ -1,0 +1,64 @@
+ mkdir java_demo
+ 
+ chmod + x builddocker.sh
+ ./builddocker.sh
+ sh builddocker.sh
+docker run --name=microservices-frontend -p 8080:8080 -d microservices-frontend:1.1
+docker stop $(docker ps -aq)
+docker rm  $(docker ps -aq)
+
+
+mvn archetype:generate -DgroupId=com.redhat.developers.guestbook \
+-DartifactId=guestbook-service \
+-DarchetypeArtifactId=maven-archetype-quickstart \
+-DinteractiveMode=false
+
+
+mkdir data
+
+mkdir rest
+
+vim Main.java
+
+vim Resources.java
+
+
+vim Message.java
+vim MessageRepository
+
+
+under rest
+
+
+vim rest/BadwordFilter.java
+
+
+
+vim rest/CorsFilter.java
+
+
+vim rest/MessageResource.java
+
+vim agent-bond-opts
+ vim  builddocker.sh
+ chmod +X  builddocker.sh
+ 
+ 
+ 
+ 
+ mysql
+ 
+docker run -d --name mysql_database -e MYSQL_USER=sivareddy -e MYSQL_PASSWORD=hemaLATHA@9490 -e MYSQL_DATABASE=guestbook -p 3306:3306 docker.io/openshift/mysql-56-centos7
+
+ 
+ 
+ microservices-guestbook
+ 
+ 
+ 
+ 
+ docker run --name=microservices-guestbook -p 8080:8080 -d microservices-guestbook:1.1
+ 
+ 
+ 
+  docker run --name=microservices-helloworld-vertx -p 8080:8080 -d microservices-helloworld-vertx:1.1
