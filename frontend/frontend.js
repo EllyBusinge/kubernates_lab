@@ -19,8 +19,8 @@ var request = require('request')
 var bodyParser = require('body-parser')
 var app = express()
 
-var guestbookendpoint = 'http://192.168.56.102:8080/api/messages'
-var helloendpoint = 'http://192.168.56.100:8080/api/hello/'
+var guestbookendpoint = 'http://neotriger.tech:8080/api/messages'
+var helloendpoint = 'http://neotriger.tech:8080/api/hello/'
 
 // Creates a $request callback using $express objects
 var defaultHandling = function(res, next) {
